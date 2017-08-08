@@ -1,0 +1,28 @@
+<div>
+    <div class="modal-header">
+        <h2 class="modal-title">Create Account</h2>
+    </div>
+    <div class="modal-body">
+        <form name="Login" ng-submit="create.ok(Login.$valid)" novalidate>
+            <div class="input-group animated">
+                <div class="form-group">
+                    <label>Username:</label>
+                    <input type="text" class="form-control" ng-model="create.username" name="username" ng-minlength="1" required>
+                </div>
+                <div>
+                    <label>Email address:</label>
+                    <input type="email" class="form-control" ng-model="create.email" name="email" ng-minlength="1" required>
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input type="password" class="form-control" ng-model="create.password" name="password" ng-minlength="1" required>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="create.ok(Login.$valid)">Submit</button>
+        <button class="btn btn-warning" type="button" ng-click="create.cancel()">Cancel</button>
+    </div>
+</div>

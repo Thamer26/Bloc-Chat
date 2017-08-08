@@ -1,0 +1,38 @@
+<section>
+    <div class="navbar">
+        <h1 class="logo">Bloc Chat</h1>
+        <div ng-controller='ModalCtrl as modals'>
+        <button type="button" class="btn btn-default" ng-click="modals.open()">New room</button>
+        </div>
+        <h4 class="room" ng-repeat="room in home.rooms">
+        <p ng-click="home.changeRoom(room)">{{ room.$value }}</p>
+        </h4>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h2>{{ currentRoom.$value }}</h2>
+        <table class="table">
+            <tr ng-repeat="message in messages track by $index" class="row" ng-class="{oddRow: $odd}">
+                <td class="username">
+                    {{ message.username }}:
+                    <br/>
+                    {{ message.content }}
+                </td>
+                <td class="sentAt">{{ message.sentAt }}</td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section>
+    <div class="input-bar">
+        <form ng-submit="home.send(home.message, currentRoom)">
+            <div class="input-group animated">
+                <input type="text" class="form-control finderBar" ng-model="home.message" placeholder="Write your message here..." autofocus>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="home.send(home.message, currentRoom)">Send</button>
+                </span>
+            </div>
+        </form>
+    </div>
+</section>

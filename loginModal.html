@@ -1,0 +1,37 @@
+<div>
+    <div class="modal-header">
+        <h2 class="modal-title">Bloc-Chat Sign In</h2>
+    </div>
+    <div class="modal-body">
+        <form name="Login" ng-submit="login.ok(Login.$valid)" novalidate>
+            <div class="input-group animated">
+                <div class="form-group">
+                    <label>Username:</label>
+                    <input type="text" class="form-control" ng-model="login.username" name="username" ng-minlength="1" required>
+                </div>
+                <div class="form-group">
+                    <label>Email address:</label>
+                    <input type="email" class="form-control" ng-model="login.email" name="email" ng-minlength="1" required>
+                </div>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" class="form-control" ng-model="login.password" name="password" ng-minlength="1" required>
+                </div>
+            </div>
+            <br/>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" ng-click="login.ok(Login.$valid)">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <div class="form-group">
+            <label>Don't have an account?</label>
+            <button type="button" class="btn btn-primary" ng-click="login.newAccount()">Create Account</button>
+        </div>
+        <div class="form-group">
+            <label>Forgot username or password?</label>
+            <button type="button" class="btn btn-primary" ng-click="login.forgot()">Forgot Password</button>
+        </div>
+    </div>
+</div>

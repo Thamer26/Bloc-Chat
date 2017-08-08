@@ -1,0 +1,84 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Arial';
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.navbar {
+    height: 100%;
+    width: 30%;
+    background-color: aqua;
+    padding: 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.room:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.container {
+    height: 100%;
+    width: 70%;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1.5rem;
+}
+
+.table {
+    width: 90%;
+}
+
+.row {
+    height: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.username {
+    width: 80%;
+}
+
+.sentAt {
+    width: 20%;
+}
+
+.oddRow {
+    background-color: white;
+    color: black;
+}
+
+.modal {
+  display: block;
+}
+
+.modal-body:before,
+  .modal-body:after {
+    display: table;
+    content: " ";
+}
+
+.modal-header:before,
+.modal-header:after {
+  display: table;
+  content: " ";
+}
+
+.input-bar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+}

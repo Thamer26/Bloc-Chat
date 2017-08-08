@@ -1,0 +1,17 @@
+<div>
+    <div class="modal-header">
+        <h2 class="modal-title">Recover Password via Email</h2>
+    </div>
+    <div class="modal-body">
+        <form name="Login" ng-submit="forgot.ok(Login.$valid)" novalidate>
+            <div class="input-group animated">
+                <label>Email address:</label>
+                <input type="email" class="form-control" ng-model="forgot.email" name="email" ng-minlength="1" required>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="forgot.ok(Login.$valid)">Recover Password</button>
+        <button class="btn btn-warning" type="button" ng-click="forgot.cancel()">Cancel</button>
+    </div>
+</div>
